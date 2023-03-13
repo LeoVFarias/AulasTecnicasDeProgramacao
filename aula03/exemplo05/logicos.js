@@ -23,3 +23,4 @@ proposições forem falsas
 // ! - not - NEGAÇÃO
 console.log("! V = "+(!true))
 console.log("! F = "+(!false))
+
