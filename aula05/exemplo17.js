@@ -10,11 +10,15 @@ class Livro{
     get Preco(){return this.Preco}
     set Preco(pPreco){this.preco = pPreco}
 
-    calcularDesconto(disc){
-        this.preco = this.preco - ((disc * this.preco)/100)
-    }
+
 }
 
-var obj_livro1 = new Livro("jooj", 200)
-obj_livro1.calcularDesconto(disc)
-console.log("Nome do Livro: " + obj_livro1.nome + " | Preço Padrão: " + obj_livro1.preco)
+var obj_livro1 = new Livro("gz", 200)
+var obj_livro2 = new Livro("2d", 100)
+
+var lista = []
+lista.push(obj_livro1)
+lista.push(obj_livro2)
+
+console.log(lista[0]);
+console.log(lista[1]);
