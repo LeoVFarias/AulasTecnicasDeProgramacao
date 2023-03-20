@@ -3,18 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <title>Calculo IMC</title>
+        <style>
+            body{
+                background: rgb(2,0,36);
+                background: linear-gradient(180deg, rgba(121,9,9,1) 35%, rgba(0,0,0,1) 100%);
+                background-attachment: fixed; 
+            }
+            #block
+                {
+                    width: 400px;
+                    height: 350px;
+                    margin:0px auto;
+                    border: black 2px solid;
+                    padding: 20px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    background-color: orange;
+                    color: blue;
+                }
+            #z{
+                position: fixed;
+                right: 73px;
+                bottom: 10px;
+                z-index: 999;
+                padding: 20px;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Calculo do IMC</h1>
-        <hr>
-        <p>Digite o seu peso: </p>
-        <input type="text" id="peso">
-        <p>Digite o sua altura: </p>
-        <input type="text" id="altura">
-        <hr>
-        <button onclick="coletarDados()">Calcular</button>
-        <h2 id="res"></h2>
-        <h3 id="status"></h3>
-        <script src="script.js"></script>
+        <img src="Son-Goku-PNG.png">
+        <img id ="z" src="z.png">
+        <div id="block">
+            <h1>Calculo do IMC</h1>
+            <hr>
+            <p>Digite o seu peso: </p>
+            <input type="text" id="peso">
+            <p>Digite o sua altura: </p>
+            <input type="text" id="altura">
+            <hr>
+            <button onclick="coletarDados()">Calcular</button>
+            <h2 id="res"></h2>
+            <h3 id="status"></h3>
+            <script src="script.js"></script>
+          </div>
     </body>
 </html>
