@@ -29,5 +29,23 @@ module.exports = {
                 aceito(results.insertCodigo);//insertID
             });
         });
+    },
+
+    alterar: (codigo,modelo,placa) =>{
+        return new Promise((aceito,rejeitado)=>{
+            db.query('update carros set modelo = ?, placa = ? where codigo = ?',[modelo,placa,codigo],(error, results)=>{
+                if(error){rejeitado(error);return;}
+                aceito(results);
+            });
+        });
+    },
+
+    excluir: (codigo) =>{
+        return new Promise((aceito,rejeitado)=>{
+            db.query('delete from carros where codigo = ?',[codigo],(error, results)=>{
+                if(error){rejeitado(error);return;}
+                aceito(results);
+            });
+        });
     }
  };
